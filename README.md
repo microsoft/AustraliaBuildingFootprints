@@ -66,7 +66,7 @@ We estimate 1% false postive ratio in 1000 randomly sampled buildings from the e
 | Error category | 35.05% Gap |
 | --- | :---: |
 | Very small buildings | 15.4% |
-| Connected buildings | 14% |
+| Connected buildings | 14.0% |
 | DNN | 2.8% |
 | Various | 2.1% |
 | Polygonization | 0.7% |
@@ -75,7 +75,7 @@ Small building example:
 ![](/images/small_building_example.jpg)
 
 Connected buildings example:  
-![](/images/connected_buildings_example.jpg)
+![](/images/connected_buildings_example.JPG)
 
 ### What is the vintage of this data?
 The vintage of the footprints depends on the vintage of the underlying imagery. Bing Imagery is a composite of multiple sources, therefore it is difficult to know the exact dates for individual pieces of data.
