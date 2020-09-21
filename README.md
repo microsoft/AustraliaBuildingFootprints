@@ -53,13 +53,15 @@ We track following metrics to measure the quality of matched buildings in the ev
 2. Shape distance – With this metric we measure the polygon outline similarity
 3. Dominant angle rotation error – This measures the polygon rotation deviation
 
-IoU is 0.79, Shape distance is 0.44, Average rotation error is 4.46 degrees
+| IoU | Shape distance | Rotation error [deg] |
+| :---: | :---: | :---: |
+|  0.79 | 0.44 | 4.46 |
 
 ![](/images/bldgmetrics.JPG)
 
 ### False positive ratio in the corpus
 
-We estimate 1% false postive ratio in 1000 randomly sampled buildings from the entire output corpus.
+We estimate ~1% false postive ratio in 1000 randomly sampled buildings from the entire output corpus.
 
 ### Evaluation recall error space
 
