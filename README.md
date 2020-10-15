@@ -1,5 +1,5 @@
 ## Introduction
-Bing Maps is releasing country wide open building footprints datasets in Australia. This dataset contains 11,334,866 computer generated building footprints. The data is freely available for download and use under applicable license.
+Bing Maps is releasing country wide open building footprints datasets in Australia. This dataset contains 11,334,866 computer generated building footprints derived using Bing Maps algorithms on satellite imagery. Satellite imagery used for extraction is from our imagery partners Maxar Technologies among others. The data is freely available for download and use under applicable license.
 
 ![](/images/example.jpg)
 
@@ -25,7 +25,7 @@ Microsoft has a continued interest in supporting a thriving OpenStreetMap ecosys
 Maybe. Never overwrite the hard work of other contributors or blindly import data into OSM without first checking the local quality. While our metrics show that this data meets or exceeds the quality of hand-drawn building footprints, the data does vary in quality from place to place, between rural and urban, mountains and plains, and so on. Inspect quality locally and discuss an import plan with the community. Always follow the [OSM import community guidelines](https://wiki.openstreetmap.org/wiki/Import/Guidelines).
 
 ### Will the data be used or made available in larger OpenStreetMap ecosystem?
-Yes. Currently Microsoft Open Buildings dataset is used in ml-enabler for task creation. You can try it out at [AI assisted Tasking Manager](https://tasks-assisted.hotosm.org/). Facebook has also integrated the dataset into experimental version of RapiD editor. Try out this experimental version here [RapiD](https://mapwith.ai/rapid-sotm2019).
+Yes. Currently Microsoft Open Buildings dataset is used in ml-enabler for task creation. You can try it out at [AI assisted Tasking Manager](https://tasks-assisted.hotosm.org/). The data will also be made avaialble in Facebook [RapiD](https://mapwith.ai/rapid#background=Bing&disable_features=boundaries&map=2.00/0.0/0.0).
 
 ### What is the creation process for this data?
 The building extraction is done in two stages:
@@ -37,6 +37,9 @@ The building extraction is done in two stages:
 
 #### Stage 2: Polygonization
 ![](/images/polygonization.jpg)
+
+### Is there any technical improvement used in this round than previous ones? 
+To train models for Australia we only had a few thousand building labels, which made it hard to rely only on supervised training. Typically we’ve used hundreds of thousands or best case tens of millions of building labels for training. In order to create a good and robust model for Australia we took advantage of self-supervised training and unsupervised domain adaptation techniques to leverage our training data from other countries and domains. We believe this is a good proof of concept to scale to building extraction to the whole world.
 
 ### Evaluation set metrics
 Australia evaluation set contains 6,785 buildings from several diverse and represenative regions.
@@ -80,7 +83,7 @@ Connected buildings example:
 ![](/images/connected_buildings_example.JPG)
 
 ### What is the vintage of this data?
-The vintage of the footprints depends on the vintage of the underlying imagery. Bing Imagery is a composite of multiple sources, therefore it is difficult to know the exact dates for individual pieces of data.
+The vintage of the footprints depends on the vintage of the underlying imagery. Bing Imagery is a composite of multiple sources, therefore it is difficult to know the exact dates for individual pieces of data. 
 
 ### How good is the data?
 Our metrics show that in the vast majority of cases the quality is at least as good as data hand digitized buildings in OpenStreetMap. It is not perfect, particularly in dense urban areas but it provides good recall in rural areas. See below for metrics by area type:  
