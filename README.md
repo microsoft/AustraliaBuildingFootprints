@@ -86,8 +86,7 @@ Connected buildings example:
 The vintage of the footprints depends on the vintage of the underlying imagery. Bing Imagery is a composite of multiple sources, therefore it is difficult to know the exact dates for individual pieces of data. 
 
 ### How good is the data?
-Our metrics show that in the vast majority of cases the quality is at least as good as data hand digitized buildings in OpenStreetMap. It is not perfect, particularly in dense urban areas but it provides good recall in rural areas. See below for metrics by area type:  
-![](/images/polygonmetrics.JPG)
+Our metrics show that in the vast majority of cases the quality is at least as good as data hand digitized buildings in OpenStreetMap. It is not perfect, particularly in dense urban areas but it provides good recall in rural areas.
 
 ### What is the coordinate reference system?
 EPSG: 4326
@@ -118,7 +117,7 @@ may be either trademarks or registered trademarks of Microsoft in the United Sta
 The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
 Microsoft's general trademark guidelines can be found [here](http://go.microsoft.com/fwlink/?LinkID=254653).
 
-Privacy information can be found [here](https://privacy.microsoft.com/en-us/)
+Privacy information can be found [here](https://privacy.microsoft.com/en-us/).
 
 Microsoft and any contributors reserve all others rights, whether under their respective copyrights, patents,
 or trademarks, whether by implication, estoppel or otherwise.
