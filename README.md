@@ -67,6 +67,9 @@ We track following metrics to measure the quality of matched buildings in the ev
 We estimate ~1% false postive ratio in 1000 randomly sampled buildings from the entire output corpus.
 
 ### Evaluation recall error space
+Correctly detecting connected buildings and small buildings are sometimes difficult tasks, even for a human labeller. There are often ambiguities in whether one is looking at multiple connected buildings or a single fragmented building. Similarly, it is sometimes hard to estimate for a small object if it should be classified as a building or not. 
+
+Output precision and recall metrics are calculated after optimal 1-to-1 matching between output polygons and labels scored by polygons intersection over union. The labels are usually very granular whilst it is sometimes very hard for DNN model to separate connected buildings. This results with significant ratio of unmatched false negatives which are pushing the recall down.  
 
 | Error category | 35.05% Gap |
 | --- | :---: |
@@ -83,7 +86,7 @@ Connected buildings example:
 ![](/images/connected_buildings_example.JPG)
 
 ### What is the vintage of this data?
-The vintage of the footprints depends on the vintage of the underlying imagery. Bing Imagery is a composite of multiple sources, therefore it is difficult to know the exact dates for individual pieces of data. 
+Vintage of extracted building footprints depends on vintage of the underlying imagery. Bing Imagery is a composite of multiple sources, therefore it is difficult to know the exact dates for individual pieces of data. However we believe the vintage is anywhere from 2013 to 2018, with majority being from 2018.
 
 ### How good is the data?
 Our metrics show that in the vast majority of cases the quality is at least as good as data hand digitized buildings in OpenStreetMap. It is not perfect, particularly in dense urban areas but it provides good recall in rural areas.
